@@ -1,0 +1,7 @@
+D:\Project C#\ExLab1\bin\Debug\ExLab1.exe.config
+D:\Project C#\ExLab1\bin\Debug\ExLab1.exe
+D:\Project C#\ExLab1\bin\Debug\ExLab1.pdb
+D:\Project C#\ExLab1\obj\Debug\ExLab1.csproj.AssemblyReference.cache
+D:\Project C#\ExLab1\obj\Debug\ExLab1.csproj.CoreCompileInputs.cache
+D:\Project C#\ExLab1\obj\Debug\ExLab1.exe
+D:\Project C#\ExLab1\obj\Debug\ExLab1.pdb
