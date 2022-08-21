@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace ExLab1
 {
@@ -11,10 +8,12 @@ namespace ExLab1
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;// Hiển thị tiếng việt trong console
             //ExSubLab1();
             //ExSubLab3();
+            ExSubLab4();
             //ExSubLab6();
-            ExSubLab5();
+            //ExSubLab5();
             Console.ReadKey();
         }
         /*1. In ra bảng cửu chương dùng cả for, dowhile, whiledo*/
@@ -129,16 +128,36 @@ namespace ExLab1
         }
         Console.WriteLine("\n ----Chuong trinh su dung tu dien---- \n");
     }
+        /*4. Cho vào 2 ký tự, xuất ra các ký tự chính giữa 2 ký tự theo bảng chữ cái
+        Ví dụ: a f --> abcdef, k q --> klmnopq*/
+        static void ExSubLab4()
+        {
+            Console.WriteLine("Moi nhap vao chuoi: ");
+            string strInp = Console.ReadLine();
+            //Lấy ra ký tự đầu tiên của chuỗi
+            string firstStr = strInp.Substring(0, 1);
+            // Lấy ra ký tự cuối cùng của chuỗi
+            string endStr = strInp.Substring(strInp.Length - 1, 1);
+            // chuyển ký tự tách được sang kiểu ký tự char 
+            char alphaStart = Char.Parse(firstStr);
+            char alphaEnd = Char.Parse(endStr);
+            String result = "";
+            for (char i = alphaStart; i <= alphaEnd; i++)
+            {
+                string anchorLetter = i.ToString();//chuyển sang kiểu chuỗi
+                result += anchorLetter; // cộng chuỗi
+            }
+            Console.WriteLine(result);
+        }
         /*5. Tìm tất cả các số có 6 chữ số trong chuỗi:
         Ví dụ: Mã xác thực t-123456 tồn tại 60s --> 123456*/
         static void ExSubLab5()
         {
-        Console.OutputEncoding = Encoding.UTF8;// Hiển thị tiếng việt trong console
         Console.Write("\n");
         Console.Write("----------Bai 5----------\n");
         Console.Write("In bang cuu chuong trong C#:\n");
         Console.Write("----5-Tìm tất cả các số có 6 chữ số trong chuỗi -----\n");
-            Console.Write("Nhap vao chuoi: ");
+        Console.Write("Nhap vao chuoi: ");
             string message = Console.ReadLine();
             string strNum = "";
             //int dem = 0;
@@ -189,5 +208,6 @@ namespace ExLab1
             }
             Console.WriteLine("\n");
         }
+        
     }
 }
